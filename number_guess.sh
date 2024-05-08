@@ -17,3 +17,6 @@ else
   HIGH_SCORE=$($PSQL "select max(score) from games where user_id = $USER_ID;")
   echo -e "\nWelcome back, $USERNAME! You have played $GAMES_COUNT games, and your best game took $HIGH_SCORE guesses."
 fi
+
+echo -e "\nGuess the secret number between 1 and 1000:"
+read USER_GUESS
